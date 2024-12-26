@@ -1,0 +1,601 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+	<title>Mix-Host - Хостинг майнкрафт </title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image:src" content="assets/images/index-meta.png">
+    <meta property="og:image" content="assets/images/index-meta.png">
+    <meta name="twitter:title" content="MixHost - Хостинг майнкрафт ">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link rel="shortcut icon" href="assets\images\cubenet.png" type="image/x-icon">
+    <meta name="description" content="Mix-Host.ru - Хостинг, на котором вы сможете создать сервер майнкрафт за 2 клика. Безлимитное место на диске, Круглосуточная работа сервера, сайт в подарок, Защита от DDoS атак.">
+	<meta name="keywords" content="Создать сервер майнкрафт, хостинг майнкрафт, создать сервер minecraft, хостинг minecraft, майнкрафт, minecraft, сервер, mix, mixhost">
+    <link rel="stylesheet" href="assets\web\assets\cubenet-icons\cubenet-icons.css">
+	<link rel="stylesheet" href="assets\web\assets\cubenet-icons-bold\cubenet-icons-bold.css">
+	<link rel="stylesheet" href="assets\bootstrap\css\bootstrap.min.css">
+	<link rel="stylesheet" href="assets\bootstrap\css\bootstrap-grid.min.css">
+	<link rel="stylesheet" href="assets\bootstrap\css\bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="assets\dropdown\css\style.css">
+	<link rel="stylesheet" href="assets\animatecss\animate.min.css">
+	<link rel="stylesheet" href="assets\as-pie-progress\css\progress.min.css">
+	<link rel="stylesheet" href="assets\tether\tether.min.css">
+	<link rel="stylesheet" href="assets\socicon\css\styles.css">
+	<link rel="stylesheet" href="assets\theme\css\style.css">
+	<link href="assets\fonts\style.css" rel="stylesheet">
+	<link rel="preload" as="style" href="assets\cubenet\css\mbr-additional.css">
+	<link rel="stylesheet" href="assets\cubenet\css\mbr-additional.css" type="text/css">
+	<script src="https://cdn.gravitec.net/storage/7508b06bc295231805989289b8c4acec/client.js" async=""></script>
+
+<style>
+    body {
+      margin: 0;
+    }
+
+    .preloader {
+      position: fixed;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+      background-color: #21D4FD;
+      background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+      z-index: 2;
+      color: #eee;
+    }
+
+    .preloader__image {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      width: 70px;
+      height: 70px;
+      margin-top: -35px;
+      margin-left: -35px;
+      text-align: center;
+      animation: preloader-rotate 2s infinite linear;
+    }
+
+    @keyframes preloader-rotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .loaded_hiding .preloader {
+      transition: 1.0s opacity;
+      opacity: 0;
+    }
+
+    .loaded .preloader {
+      display: none;
+    }
+  </style>
+
+</head>
+
+<body>
+
+    <!-- Analytics -->
+    <script type="text/javascript">
+        ! function() {
+            var t = document.createElement("script");
+            t.type = "text/javascript", t.async = !0, t.src = "https://vk.com/js/api/openapi.js?167", t.onload = function() {
+                VK.Retargeting.Init("VK-RTRG-480496-kdKu"), VK.Retargeting.Hit()
+            }, document.head.appendChild(t)
+        }();
+    </script><noscript><img src="https://vk.com/rtrg?p=VK-RTRG-480496-kdKu" style="position:fixed; left:-999px;" alt=""></noscript>
+
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        (function(m, e, t, r, i, k, a) {
+            m[i] = m[i] || function() {
+                (m[i].a = m[i].a || []).push(arguments)
+            };
+            m[i].l = 1 * new Date();
+            k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+        })
+        (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+        ym(62289481, "init", {
+            clickmap: true,
+            trackLinks: true,
+            accurateTrackBounce: true,
+            webvisor: true
+        });
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/62289481" style="position:absolute; left:-9999px;" alt=""></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- /Analytics -->
+<!-- Прелоадер -->
+  <div class="preloader">
+    <svg class="preloader__image" role="img" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512">
+      <path fill="currentColor" d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z">
+      </path>
+    </svg>
+  </div>
+
+    <section class="menu cid-rX6ysPNjCx" once="menu" id="menu2-e">
+
+
+
+        <nav class="navbar navbar-expand beta-menu navbar-dropdown align-items-center navbar-fixed-top navbar-toggleable-sm">
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            <div class="menu-logo">
+                <div class="navbar-brand">
+                    <span class="navbar-logo">
+                        <a href="index.htm">
+                            <img src="assets\images\cubenet.png" alt="MixHost" title="Создать майнкрафт сервер, хостинг серверов майнкрафт" style="height: 3.8rem;">
+                        </a>
+                    </span>
+
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true">
+                    <li class="nav-item">
+                        <a class="nav-link link text-black display-4" href="https://mgr.mix-host.ru" target="_blank"><span class="mbri-plus mbr-iconfont mbr-iconfont-btn"></span>Регистрация</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link text-black display-4" href="https://mgr.mix-host.ru" target="_blank"><span class="mbri-lock mbr-iconfont mbr-iconfont-btn"></span>Авторизация&nbsp;</a>
+                    </li>
+                </ul>
+                <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-7" href="https://my.mix-host.ru" target="_blank"><span class="mbri-browse mbr-iconfont mbr-iconfont-btn"></span>Панель управления</a></div>
+            </div>
+        </nav>
+    </section>
+
+    <section class="engine"><a href="index.htm"></a></section>
+    <section class="header3 cid-rX6xDurCUA mbr-fullscreen mbr-parallax-background" id="header3-d">
+
+
+
+        <div class="mbr-overlay" style="opacity: 0.1; background-color: rgb(197, 15, 213);">
+        </div>
+
+        <div class="container">
+            <div class="media-container-row">
+                <div class="mbr-figure" style="width: 85%;">
+                    <img src="assets\images\1.png" alt="Хостинг Minecraft-серверов, воплощающий твои мечты." title="">
+                </div>
+
+                <div class="media-content">
+                    <h1 class="mbr-section-title mbr-white pb-3 mbr-fonts-style display-1"><strong><br></strong><strong>MixHost</strong></h1>
+                    <h3 class="mbr-section-subtitle align-left mbr-white mbr-light pb-3 mbr-fonts-style display-5">Создай свой уникальный,<br>мир в легендарной игре Minecraft!.</h3>
+                    <div class="mbr-section-text mbr-white pb-3 ">
+                        <p class="mbr-text mbr-fonts-style display-5">
+                            Построй свой собственный мир в&nbsp;легендарной игре MineCraft<br></p>
+                    </div>
+                    <div class="mbr-section-btn"><a class="btn btn-md btn-primary display-4" href="https://mgr." target="_blank">Регистрация</a>
+                        <a class="btn btn-md btn-white-outline display-4" href="index.html#features1-h">Преимущества<br></a></div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="features1 cid-rX6CrtR2Ds" id="features1-h">
+
+
+
+
+        <div class="container">
+            <div class="media-container-row">
+
+                <div class="card p-3 col-12 col-md-6 col-lg-3">
+                    <div class="card-img pb-3">
+                        <span class="mbr-iconfont mbri-protect" style="color: rgb(197, 15, 213); fill: rgb(197, 15, 213);"></span>
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title py-3 mbr-fonts-style display-5">Защита от DDoS и Бот-Атак</h4>
+                        <p class="mbr-text mbr-fonts-style display-7"><strong>
+                                AntiDDoS</strong>&nbsp;собственноручно разработан для игровых серверов и обеспечивает полную защиту от <strong>любых видов атак</strong> на уровнях <strong>L3-L7</strong>.<br>На всём хостинге функционирует <strong>самописная защита от ботов</strong>, которая <strong>не потребует</strong> от вас установки дополнительных плагинов.</p>
+                    </div>
+                </div>
+
+                <div class="card p-3 col-12 col-md-6 col-lg-3">
+                    <div class="card-img pb-3">
+                        <span class="mbr-iconfont mbri-wifi" style="color: rgb(197, 15, 213); fill: rgb(197, 15, 213);"></span>
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title py-3 mbr-fonts-style display-5">Низкий пинг, локации РФ / FN<br></h4>
+                        <p class="mbr-text mbr-fonts-style display-7"><strong>Низкий пинг</strong> обеспечит максимально комфортную игру вашим игрокам. Забудьте про разрывы подключения и вылеты сети.<strong><br></strong>Оптимальный пинг по территории <strong>России</strong> и <strong>СНГ</strong> <strong>именно</strong> у нас.<br>Средний результат по нашему хостингу: <strong>~24ms</strong><br>
+                            <br><br></p>
+                    </div>
+                </div>
+
+                <div class="card p-3 col-12 col-md-6 col-lg-3">
+                    <div class="card-img pb-3">
+                        <span class="mbr-iconfont mbrib-database" style="color: rgb(197, 15, 213); fill: rgb(197, 15, 213);"></span>
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title py-3 mbr-fonts-style display-5">
+                            Своё мощное оборудование</h4>
+                        <p class="mbr-text mbr-fonts-style display-7"><strong>Своё </strong>оборудование, расположенное в лучших датацентрах <strong>России</strong> и <strong>Финляндии.</strong><br>Кроме того, наше железо смело можно назвать <strong>без тормозов</strong>.<br><strong>Наши процессоры</strong>:<br>&nbsp;Intel Xeon&nbsp;E5-2680 v2,Intel Core i7 6700k, AMD Ryzen 7 3700X.<br>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card p-3 col-12 col-md-6 col-lg-3">
+                    <div class="card-img pb-3">
+                        <span class="mbr-iconfont mbri-gift" style="color: rgb(197, 15, 213); fill: rgb(197, 15, 213);"></span>
+                    </div>
+                    <div class="card-box">
+                        <h4 class="card-title py-3 mbr-fonts-style display-5">Подарки для клиентов</h4>
+                        <p class="mbr-text mbr-fonts-style display-7">
+                            Мы ценим <strong>каждого</strong> клиента, именно поэтому мы щедры на <strong>подарки</strong> и <strong>акции</strong>.<br>Каждый посетитель, который купит у нас <strong>любой тариф</strong>, получит в <strong>подарок</strong>:<br>- <strong>Сайт для сервера</strong><br>- <strong>Буквенный айпи</strong><br>- <strong>MySQL базу данных</strong><br>- <strong>Безлимитный диск</strong><strong><br></strong></p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="pricing-table3 cid-rX6CBRxPxG" id="pricing-tables3-i">
+
+
+
+
+        <div class="container">
+            <div class="media-container-row">
+                <div class=" col-12 col-lg-4 col-md-6 my-2">
+                    <div class="pricing">
+                        <div class="plan-header">
+                            <div class="plan-price">
+                                <span class="price-value mbr-fonts-style display-5">&nbsp; &nbsp; &nbsp;₽</span>
+                                <span class="price-figure mbr-fonts-style display-1">70</span>
+                                <h3 class="plan-title mbr-fonts-style display-5"><strong>Слотовый<br></strong><br><em>Для небольших проектов и друзей</em></h3>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="plan-body">
+                            <p class="mbr-text mbr-fonts-style display-7"><strong>Процессор:</strong> Не ограничен
+                                <br><strong>Озу:</strong> 1 слот = 10 мб.
+                                <br><strong>SSD:</strong> 100 гб.
+                                <br><strong>Слоты:</strong>&nbsp;Ограничены
+                                <br><strong>Сайт и MySQL:</strong> Есть
+                                <br><strong>Буквенный айпи:&nbsp;</strong>f1.mix-host.ru<br><strong>Доступность:</strong> 24/7
+                                <br><strong>Защита от DDoS:</strong> L3-L7
+                                <br><strong>AntiBot:</strong>
+                                <br>Защита от ботов не зависящая от игрового сервера и не требующая установки плагинов.</p>
+                            <div class="mbr-section-btn pt-4 text-center"><a href="https://mgr.mix-host.ru/" class="btn btn-primary display-4">ЗАКАЗАТЬ<br></a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4 col-md-6 my-2">
+                    <div class="pricing">
+                        <div class="plan-header">
+                            <div class="plan-price">
+                                <span class="price-value mbr-fonts-style display-5">&nbsp; ₽&nbsp;</span>
+                                <span class="price-figure mbr-fonts-style display-1">100</span>
+                                <h3 class="plan-title mbr-fonts-style display-5"><strong>По ресурсам<br></strong><br><em>Для средних и крупных проектов</em></h3>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="plan-body">
+                            <p class="mbr-text mbr-fonts-style display-7"><strong>Процессор:</strong> Не ограничен<br><strong>Озу:</strong> от 1 гб. до 16 гб.<br><strong>SSD:</strong> ∞&nbsp;<br><strong>Слоты:</strong> ∞<br><strong>Сайт и MySQL</strong>: Есть<br><strong>Буквенный айпи:&nbsp;</strong>f1.mix-host.ru<br><strong>Доступность:</strong> 24/7
+                                <br><strong>Защита от DDoS:</strong> L3-L7
+                                <br><strong>AntiBot:</strong>
+                                <br>Защита от ботов не зависящая от игрового сервера и не требующая установки плагинов.</p>
+                            <div class="mbr-section-btn pt-4 text-center"><a href="https://mgr.mix-host.ru/" class="btn btn-primary display-4">ЗАКАЗАТЬ</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-4 col-md-6 my-2">
+                    <div class="pricing">
+                        <div class="plan-header">
+                            <div class="plan-price">
+                                <span class="price-value mbr-fonts-style display-5">&nbsp; &nbsp; ₽&nbsp;</span>
+                                <span class="price-figure mbr-fonts-style display-1">99</span>
+                                <h3 class="plan-title mbr-fonts-style display-5"><strong>BungeeCord<br></strong><br><em>Только для связки других серверов!</em></h3>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="plan-body ">
+                            <p class="mbr-text mbr-fonts-style display-7"><strong>Процессор:</strong>&nbsp;Не ограничен
+                                <br><strong>Озу:</strong> 900 мб.&nbsp;<br><strong>SSD:</strong> ∞ <br><strong>
+                                    Слоты:</strong> ∞<br><strong>Сайт и MySQL:</strong> Есть
+                                <br><strong>Буквенный айпи: </strong>f1.mix-host.ru<br><strong>Доступность:</strong> 24/7 <br><strong>Защита от DDoS:</strong> L3-L7
+                                <br><strong>AntiBot:
+                                </strong><br>Защита от ботов не зависящая от игрового сервера и не требующая установки плагинов.</p>
+                            <div class="mbr-section-btn pt-4 text-center"><a href="https://mgr.mix-host.ru/" class="btn btn-primary display-4">ЗАКАЗАТЬ</a></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="progress-bars3 cid-rXhTFIVhgG" id="progress-bars3-11">
+
+
+
+
+
+        <div class="container">
+            <h2 class="mbr-section-title pb-3 align-center mbr-fonts-style display-1">
+                MixHost в цифрах</h2>
+
+
+
+            <div class="media-container-row pt-5 mt-2">
+                <div class="card p-3 align-center">
+                    <div class="wrap">
+                        <div class="pie_progress progress1" role="progressbar" data-goal="100">
+                            <p class="pie_progress__number mbr-fonts-style display-5">80%</p>
+                        </div>
+                    </div>
+                    <div class="mbr-crt-title pt-3">
+                        <h4 class="card-title py-2 mbr-fonts-style display-5">
+                            Удобство<br>панели</h4>
+                    </div>
+                </div>
+
+                <div class="card p-3 align-center">
+                    <div class="wrap">
+                        <div class="pie_progress progress2" role="progressbar" data-goal="99">
+                            <p class="pie_progress__number mbr-fonts-style display-5">99.9%</p>
+                        </div>
+                    </div>
+                    <div class="mbr-crt-title pt-3">
+                        <h4 class="card-title py-2 mbr-fonts-style display-5">
+                            Аптайм хостинга</h4>
+                    </div>
+                </div>
+
+                <div class="card p-3 align-center">
+                    <div class="wrap">
+                        <div class="pie_progress progress3" role="progressbar" data-goal="100">
+                            <p class="pie_progress__number mbr-fonts-style display-5">200+</p>
+                        </div>
+                    </div>
+                    <div class="mbr-crt-title pt-3">
+                        <h4 class="card-title py-2 mbr-fonts-style display-5">Запросов<br>обработано</h4>
+                    </div>
+                </div>
+
+                <div class="card p-3 align-center">
+                    <div class="wrap">
+                        <div class="pie_progress progress4" role="progressbar" data-goal="93">
+                            <p class="pie_progress__number mbr-fonts-style display-5">100%</p>
+                        </div>
+                    </div>
+                    <div class="mbr-crt-title pt-3">
+                        <h4 class="card-title py-2 mbr-fonts-style display-5">Хороших отзывов</h4>
+                    </div>
+                </div>
+
+                <div class="card p-3 align-center">
+                    <div class="wrap">
+                        <div class="pie_progress progress5" role="progressbar" data-goal="100">
+                            <p class="pie_progress__number mbr-fonts-style display-5">100</p>
+                        </div>
+                    </div>
+                    <div class="mbr-crt-title pt-3">
+                        <h4 class="card-title py-2 mbr-fonts-style display-5">Отбито DDoS и бот атак</h4>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials1 cid-rXb3w77GzW" id="testimonials1-w">
+    
+        <section class="tabs3 cid-rXbvcncCrm mbr-parallax-background" id="tabs3-z">
+    </section>
+                </div>
+                <div class="carousel-controls">
+                    <a data-app-prevent-settings="" class="carousel-control carousel-control-prev" role="button" data-slide="prev">
+                        <span aria-hidden="true" class="mbri-left mbr-iconfont"></span>
+                        <span class="sr-only">Назад</span>
+                    </a>
+                    <a data-app-prevent-settings="" class="carousel-control carousel-control-next" role="button" data-slide="next">
+                        <span aria-hidden="true" class="mbri-right mbr-iconfont"></span>
+                        <span class="sr-only">Вперед</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tabs3 cid-rXbvcncCrm mbr-parallax-background" id="tabs3-z">
+
+
+
+        <div class="mbr-overlay" style="opacity: 0.6; background-color: rgb(255, 255, 255);">
+        </div>
+
+        <div class="container">
+            <h2 class="mbr-section-title align-center pb-3 mbr-fonts-style display-2"><strong>Создай свой майнкрафт сервер сейчас</strong><strong><br></strong></h2>
+            <h3 class="mbr-section-subtitle  display-5 align-center mbr-light mbr-fonts-style">Создание майнкрафт сервера на MixHost - увлекательный и простой процесс, который в конце принесёт вам море позитивных эмоций. <br>Ваш майнкрафт сервер сразу будет готов к приёму игроков.<br></h3>
+        </div>
+        <div class="container-fluid">
+            <div class="row tabcont">
+                <ul class="nav nav-tabs pt-3 mt-5" role="tablist">
+                    <li class="nav-item mbr-fonts-style"><a class="nav-link show active display-5" role="tab" data-toggle="tab" href="#tabs3-z_tab0" aria-selected="true"><span class="mbri-speed mbr-iconfont mbr-iconfont-btn" style="color: rgb(197, 15, 213);"></span>
+                            За 5 минут</a></li>
+                    <li class="nav-item mbr-fonts-style"><a class="nav-link  show active display-5" role="tab" data-toggle="tab" href="#tabs3-z_tab1" aria-selected="true"><span class="mbri-smile-face mbr-iconfont mbr-iconfont-btn" style="color: rgb(197, 15, 213);"></span>
+                            Легко и просто</a></li>
+                    <li class="nav-item mbr-fonts-style"><a class="nav-link show active display-5" role="tab" data-toggle="tab" href="#tabs3-z_tab2" aria-selected="true"><span class="mbrib-extension mbr-iconfont mbr-iconfont-btn" style="color: rgb(197, 15, 213);"></span>&nbsp;Готов к игре</a></li>
+
+
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row px-1">
+                <div class="tab-content">
+                    <div id="tab1" class="tab-pane in active mbr-table" role="tabpanel">
+                        <div class="row tab-content-row">
+                            <div class="col-xs-12 col-md-6">
+                                <div class="card-img ">
+                                    <a href="panel\auth\register.html"><span class="mbr-iconfont mbri-speed" style="color: rgb(197, 15, 213); fill: rgb(197, 15, 213);"></span></a>
+                                </div>
+                                <h4 class="mbr-element-title  align-center mbr-fonts-style pb-2 display-5">САМЫЙ БЫСТРЫЙ ЗАПУСК</h4>
+                                <p class="mbr-section-text  align-center mbr-fonts-style display-4"><strong>Сразу после оплаты ваш сервер будет автоматически установлен в течении 5 минут - лучший результат среди всех майнкрафт хостингов<br><br><em>Для запуска сервера нажмите на молнию</em></strong></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="tab2" class="tab-pane  mbr-table" role="tabpanel">
+                        <div class="row tab-content-row">
+                            <div class="col-xs-12 col-md-6">
+                                <div class="card-img ">
+                                    <a href="panel\auth\register.html"><span class="mbr-iconfont mbri-smile-face" style="color: rgb(197, 15, 213); fill: rgb(197, 15, 213);"></span></a>
+                                </div>
+                                <h4 class="mbr-element-title  align-center mbr-fonts-style pb-2 display-5">
+                                    ЛЕГКО И ПРОСТО
+                                </h4>
+                                <p class="mbr-section-text  align-center mbr-fonts-style display-4"><strong>Создание майнкрафт сервера на хостинге MixHost не потребует от вас знаний в програмировании. Все операции выполняются через интуитивно понятную панель управления.<br><br><em>Для запуска сервера нажмите на смайлик</em></strong></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div id="tab3" class="tab-pane  mbr-table" role="tabpanel">
+                        <div class="row tab-content-row">
+                            <div class="col-xs-12 col-md-6">
+                                <div class="card-img ">
+                                    <a href="panel\auth\register.html"><span class="mbr-iconfont mbri-extension" style="color: rgb(197, 15, 213); fill: rgb(197, 15, 213);"></span></a>
+                                </div>
+                                <h4 class="mbr-element-title  align-center mbr-fonts-style pb-2 display-5">
+                                    ИГРАЙ СРАЗУ ПОСЛЕ ЗАПУСКА</h4>
+                                <p class="mbr-section-text  align-center mbr-fonts-style display-4"><strong>Сразу после покупки и автоматической установки ваш сервер будет готов к приёму новых игроков и ваших друзей. Никаких дополнительных действий не требуется.&nbsp;Это самое чувство...<br><em><br>Нажмите на кубики для запуска сервера</em></strong></p>
+                            </div>
+
+                        </div>
+                    </div>
+                        </div>
+                    </div>
+                        </div>
+    </section>
+
+<section class="footer4 cid-rX6COt6we4 mbr-reveal mbr-parallax-background" id="footer4-j">
+
+    
+
+    <div class="mbr-overlay" style="background-color: rgb(35, 35, 35); opacity: 0.9;"></div>
+
+    <div class="container">
+        <div class="media-container-row content mbr-white">
+            <div class="col-md-3 col-sm-4">
+                <div class="mb-3 img-logo">
+                    <a href="index.htm">
+                        <img src="assets\images\cubenet.png" alt="" title="">
+                    </a>
+                </div>
+                <p class="mb-3 mbr-fonts-style foot-title display-7"><a href="index.htm" class="text-white">Mix-Host.ru</a></p>
+                <p class="mbr-text mbr-fonts-style mbr-links-column display-7"><a href="https://vk.com/topic-177677725_40902142" class="text-white" target="_blank">Отзывы</a><br><a href="https://vk.me/mix-host" class="text-white" target="_blank">Тех.поддержка</a>&nbsp;<br><a href="https://my.mix-host.ru" class="text-white" target="_blank">Панель управления</a><br><a href="https://discord.gg/P8HfNkvcNE" target="_blank" class="text-white">Пинг-Бот</a></p>
+            </div>
+            <div class="col-md-4 col-sm-8">
+                <p class="mb-4 foot-title mbr-fonts-style display-7"></p>
+                <p class="mbr-text mbr-fonts-style foot-text display-7"><br><br><br><br>Мы создали MixHost с пониманием того, каким должен быть игровой хостинг, а именно: удобным, функциональным, быстрым &nbsp;и полностью защищённым.&nbsp;<br>(С) Владимир Смирнов, основатель.<br></p>
+            </div>
+            <div class="col-md-4 offset-md-1 col-sm-12">
+                
+                
+                
+                <p class="mb-4 mbr-fonts-style foot-title display-7">
+                    <br><br><br><br><br>СВЯЗАТЬСЯ С НАМИ
+                </p>
+                <div class="social-list pl-0 mb-0">
+                        <div class="soc-item">
+                            <a href="https://vk.com/mix-host" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-vkontakte socicon"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://vk.me/mix-host" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-mail socicon"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://discord.gg/87WS4dGnpY" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-discord socicon"></span>
+                            </a>
+                        </div>
+                        <div class="soc-item">
+                            <a href="https://twitter.com/MixHost" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-twitter socicon"></span>
+                            </a>
+                        </div>
+                 <!--       <div class="soc-item">
+                            <a href="https://zen.yandex.ru/id/5ce9825399144700b4c11803" target="_blank">
+                                <span class="mbr-iconfont mbr-iconfont-social socicon-yandex socicon"></span>
+                            </a>
+                        </div> -->
+                        
+                </div>
+            </div>
+        </div>
+        <div class="footer-lower">
+            <div class="media-container-row">
+                <div class="col-sm-12">
+                    <hr>
+                </div>
+            </div>
+            <div class="media-container-row mbr-white">
+                <div class="col-sm-12 copyright">
+                    <p class="mbr-text mbr-fonts-style display-7">
+                        © Copyright 2024 MixHost - Все права защищены</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <script>
+    window.onload = function () {
+      document.body.classList.add('loaded_hiding');
+      window.setTimeout(function () {
+        document.body.classList.add('loaded');
+        document.body.classList.remove('loaded_hiding');
+      }, 1000);
+    }
+  </script>
+
+    <script src="assets\web\assets\jquery\jquery.min.js"></script>
+    <script src="assets\popper\popper.min.js"></script>
+    <script src="assets\bootstrap\js\bootstrap.min.js"></script>
+    <script src="assets\smoothscroll\smooth-scroll.js"></script>
+    <script src="assets\dropdown\js\nav-dropdown.js"></script>
+    <script src="assets\dropdown\js\navbar-dropdown.js"></script>
+    <script src="assets\touchswipe\jquery.touch-swipe.min.js"></script>
+    <script src="assets\viewportchecker\jquery.viewportchecker.js"></script>
+    <script src="assets\parallax\jarallax.min.js"></script>
+    <script src="assets\as-pie-progress\jquery-as-pie-progress.min.js"></script>
+    <script src="assets\bootstrapcarouselswipe\bootstrap-carousel-swipe.js"></script>
+    <script src="assets\mbr-clients-slider\mbr-clients-slider.js"></script>
+    <script src="assets\mbr-tabs\mbr-tabs.js"></script>
+    <script src="assets\tether\tether.min.js"></script>
+    <script src="assets\theme\js\script.js"></script>
+    <script src="assets\formoid\formoid.min.js"></script>
+
+
+    <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
+    <input name="animation" type="hidden">
+</body>
+
+</html>
